@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Detail</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe Detail</h1>
+        <div id="recipe-details"></div>
+        <button onclick="goBack()">Back to Recipes</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function goBack() {
+            window.history.back(); // Go back to previous page
+        }
+
+        // Function to load recipe details based on query parameter
+        function loadRecipeDetails() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const recipeName = urlParams.get('recipe');
+
+            if (recipeName) {
+                const recipe = recipes.find(r => r.name === recipeName);
+
+                if (recipe) {
+                    const recipeDetailsContainer = document.getElementById('recipe-details');
+                    recipeDetailsContainer.innerHTML = `
+                        <h2>${recipe.name}</h2>
+                        <img src="${recipe.image}" alt="${recipe.name}" class="recipe-image">
+                        <p><strong>Ingredients:</strong></p>
+                        <ul>
+                            ${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+                        </ul>
+                        <p><strong>Instructions:</strong></p>
+                        <p>${recipe.instructions}</p>
+                    `;
+                } else {
+                    const recipeDetailsContainer = document.getElementById('recipe-details');
+                    recipeDetailsContainer.innerHTML = '<p>Recipe not found.</p>';
+                }
+            } else {
+                const recipeDetailsContainer = document.getElementById('recipe-details');
+                recipeDetailsContainer.innerHTML = '<p>Recipe not specified.</p>';
+            }
+        }
+
+        // Load recipe details when page loads
+        document.addEventListener('DOMContentLoaded', loadRecipeDetails);
+    </script>
+</body>
+</html>
