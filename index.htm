@@ -3,21 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Search</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>CookMaster - Recipe Finder</title>
+    <link rel="stylesheet" href="recipie.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Recipe Search</h1>
-        <form id="ingredient-form">
-            <label for="ingredient-input">Enter an Ingredient:</label>
-            <input type="text" id="ingredient-input" placeholder="e.g., chicken, tomato">
-            <button type="submit">Generate Recipes</button>
-        </form>
-        <div id="suggestions-container"></div>
-        <div id="recipes-container"></div>
-    </div>
 
-    <script src="script.js"></script>
+<header style="background-color: #064E3B; color: #fff; padding: 5px 30px; border-radius: 40px; display: flex; justify-content: space-between; align-items: center;">
+    <div style="display: flex; align-items: center;">
+        <a href="#" class="logo" style="text-decoration: none; color: #fff; font-size: 1.5em; font-weight: bold;">CookMaster</a>
+    </div>
+    <div style="flex: 1; text-align: center;">
+        <img src="images.png" alt="Logo" style="width: 50px; height: 51px;">
+    </div>
+    <nav style="flex: 1; text-align: right;">
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; align-items: center; justify-content: flex-end;">
+            <li style="margin-right: 20px;"><a href="#" style="text-decoration: none; color: #fff; font-size: 1em;">Home</a></li>
+            <li style="margin-right: 20px;"><a href="#" style="text-decoration: none; color: #fff; font-size: 1em;">Recipes</a></li>
+            <li><a href="#" style="text-decoration: none; color: #fff; font-size: 1em;">Blog</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+    <h1>Discover <br>Delicious Recipes<br> with Your <br>Ingredients</h1>
+    <p>Enter your ingredients to get personalized recipes. Enjoy easy, delicious meals<br> with what you have on hand.</p>
+    <form id="ingredient-form">
+        <input type="text" id="ingredient-input" placeholder="e.g., Chicken, potato, etc." aria-label="Search for recipes"
+       style="width: 700px; padding: 10px; border: 1px solid #ccc; border-radius: 20px; margin-bottom: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+<br>
+        <button type="submit" style="padding: 10px 20px; background-color: #65A30D; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+            Search Recipe
+        </button>
+    </form>
+</section>
+
+<section class="recipe-categories">
+            <h2>Explore Recipes by Categories</h2>
+            <div class="categories-grid">
+                <div class="category-item">
+                    <img src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Indian Cuisine">
+                    <p>Indian</p>
+                </div>
+                <div class="category-item">
+                    <img src="https://images.pexels.com/photos/3054690/pexels-photo-3054690.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chinese Cuisine">
+                    <p>Chinese</p>
+                </div>
+                <div class="category-item">
+                    <img src="https://images.unsplash.com/photo-1616299915952-04c803388e5f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aXRhbGlhbiUyMGZvb2R8ZW58MHwwfDB8fHwy" alt="Italian Cuisine">
+                    <p>Italian</p>
+                </div>
+                <div class="category-item">
+                    <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c291dGglMjBpbmRpYW4lMjBmb29kfGVufDB8MHwwfHx8Mg%3D%3D" alt="Italian Cuisine">
+                    <p>South Indian</p>
+                </div>
+                <div class="category-item">
+                    <img src="https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmlyeWFuaXxlbnwwfDB8MHx8fDI%3D" alt="Chinese Cuisine">
+                    <p>Biryani</p>
+                </div>
+                <div class="category-item">
+                    <img src="https://images.unsplash.com/photo-1616486447077-f8d3f7bae6b7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8a2FiYWJ8ZW58MHwwfDB8fHwy" alt="Indian Cuisine">
+                    <p>Kabab</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="predefined-recipes">
+            <h2>Predefined Recipes</h2>
+            <p style="color:#166534">Discover our curated selection of recipes, ready for you to try.</p>
+            <div class="recipes-grid">
+                <div class="recipe-card">
+                    <img src="https://media.gettyimages.com/id/519141560/photo/poha.jpg?s=612x612&w=0&k=20&c=KbT1XCUKOjdmFpxSZcxQIuCocFVT6VfACcRZxnXPeIo=" alt="Hearty Breakfast">
+                    <h3>Hearty Breakfast</h3>
+                    <p>Start your day right with this classic breakfast platter.</p>
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <a href="#" class="view-recipe">View Recipe</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="https://media.gettyimages.com/id/723523393/photo/mango-quinoa-salad-with-rocket-avocado-cucumber-red-radishes-and-pumpkin-seeds.jpg?s=612x612&w=0&k=20&c=1liLikUmyr3C-jyL12c6MfmssuGcbuwk18ek5mVcTqQ=" alt="Quinoa Salad">
+                    <h3>Quinoa Salad</h3>
+                    <p>A refreshing and nutritious salad that's perfect for lunch.</p>
+                    <div class="rating">
+                        ⭐⭐⭐⭐☆
+                    </div>
+                    <a href="#" class="view-recipe">View Recipe</a>
+                </div>
+                <div class="recipe-card">
+                    <img src="https://media.gettyimages.com/id/145571813/photo/plate-of-sweet-deserts.jpg?s=612x612&w=0&k=20&c=oaKLHSmdN89w7x7Vh7Dv9jPWULugCY61mA4m8yF2GRc=" alt="Chocolate Cake">
+                    <h3>Deserts & Cakes</h3>
+                    <p>Indulge in this rich and moist chocolate cake, a true classic.</p>
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <a href="#" class="view-recipe">View Recipe</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="post-recipies">
+    <h1 style="text-align: center; font-family: 'Playfair Display', serif; font-weight: bold;margin-bottom: 30px; font-size: 4em;color:#064E3B">Want to post your Recipe?</h1>
+
+    <p style="text-align: center;margin-bottom: 60px;color:#166534">You can post your recipe here and see what people are saying about your recipe!</p>
+</section>
+
+        <div class="features">
+            <div class="feature">
+                <h2>Create account</h2>
+                <p>Quickly create an account and start your culinary journey.</p>
+            </div>
+            <div class="feature">
+                <h2>Post Your Recipies</h2>
+                <p>Easily share your favorite recipes including photos, ingredients, and instructions.</p>
+            </div>
+            <div class="feature">
+                <h2>Community Blog</h2>
+                <p>Share your recipes and tips with our friendly community.</p>
+            </div>
+        </div>
+    </section>
+
+        <section class="top-recipes">
+            <h2>Top Weekly Recipes</h2>
+            <p>See how CookMaster's top weekly recipes posted by users and liked by users.</p>
+            <div class="recipes">
+                <div class="recipe">
+                    <img src="https://images.pexels.com/photos/1438672/pexels-photo-1438672.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Pasta Primavera">
+                    <h3>Pasta</h3>
+                    <p>An easy and vibrant pasta dish that's perfect for spring.</p>
+                    <p style="color:yellow;">★★★★☆</p>
+                    <a href="#">View Recipe</a>
+                </div>
+                <div class="recipe">
+                    <img src="https://images.pexels.com/photos/11842143/pexels-photo-11842143.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Fluffy Pancakes">
+                    <h3>Fluffy Pancakes</h3>
+                    <p>The ultimate breakfast comfort food.</p>
+                    <p style="color:yellow;">★★★★☆</p>
+                    <a href="#">View Recipe</a>
+                </div>
+                <div class="recipe">
+                    <img src="https://t4.ftcdn.net/jpg/03/09/83/77/240_F_309837765_AVLDublHCxCi11v4eyxsABkMLUaLuKUv.jpg" alt="Watermelon Salad">
+                    <h3>Butter Chicken</h3>
+                    <p>A perfect dinner Indian recipie for non-veg lovers</p>
+                    <p style="color:yellow;">★★★★☆</p>
+                    <a href="#">View Recipe</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CookMaster</h4>
+                <ul>
+                    <li><a href="#">Breakfast</a></li>
+                    <li><a href="#">Lunch</a></li>
+                    <li><a href="#">Dinner</a></li>
+                    <li><a href="#">Desserts</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="#">Vegan</a></li>
+                    <li><a href="#">Gluten-Free</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Submit Recipe</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section subscribe">
+                <h4>Subscribe</h4>
+                <p>Join our newsletter for the latest recipes and updates.</p>
+                <form action="#">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CookMaster. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Cookies Settings</a></li>
+            </ul>
+            <ul class="social-links">
+                <li><a href="#"><img src="facebook-icon.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="twitter-icon.png" alt="Twitter"></a></li>
+                <li><a href="#"><img src="instagram-icon.png" alt="Instagram"></a></li>
+                <li><a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+<script>
+        document.getElementById('ingredient-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission from reloading the page
+
+            const ingredientInput = document.getElementById('ingredient-input');
+            const ingredient = ingredientInput.value.trim().toLowerCase(); // Trim whitespace and convert to lowercase
+
+            if (ingredient) {
+                // Redirect to recipe.html with the search query as a parameter
+                window.location.href = `recipe.html?ingredient=${encodeURIComponent(ingredient)}`;
+            }
+        });
+    </script>
+
 </body>
 </html>
