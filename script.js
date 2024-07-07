@@ -1,5 +1,4 @@
-
-    const recipes = [
+const recipes = [
     {
         name: "Spaghetti Bolognese",
         image: "https://example.com/spaghetti.jpg",
@@ -153,282 +152,52 @@
     {
         name: "Chana Masala",
         image: "https://example.com/chana_masala.jpg",
-        ingredients: ["chickpeas", "tomato", "onion", "ginger", "spices"],
-        instructions: "Cook chickpeas with tomato, onion, ginger, and spices until thickened. Serve hot."
+        ingredients: ["chickpeas", "onion", "tomato", "ginger", "spices"],
+        instructions: "Cook chickpeas with onion, tomato, ginger, and spices until tender. Serve hot."
     },
     {
-        name: "Vegetable Biryani",
-        image: "https://example.com/vegetable_biryani.jpg",
-        ingredients: ["rice", "mixed vegetables", "spices", "yogurt", "saffron"],
-        instructions: "Cook rice. Sauté mixed vegetables with spices. Layer rice and vegetables. Garnish with yogurt and saffron."
+        name: "Mango Lassi",
+        image: "https://example.com/mango_lassi.jpg",
+        ingredients: ["mango", "yogurt", "milk", "sugar", "cardamom"],
+        instructions: "Blend mango, yogurt, milk, sugar, and cardamom until smooth. Serve chilled."
     },
     {
-        name: "Rasgulla",
-        image: "https://example.com/rasgulla.jpg",
-        ingredients: ["milk", "sugar", "lemon juice", "rose water"],
-        instructions: "Boil milk. Add lemon juice to curdle. Strain and knead to make chenna. Form into balls. Boil in sugar syrup with rose water until fluffy."
+        name: "Tiramisu",
+        image: "https://example.com/tiramisu.jpg",
+        ingredients: ["ladyfingers", "mascarpone cheese", "coffee", "cocoa powder", "rum"],
+        instructions: "Layer ladyfingers with mascarpone mixture soaked in coffee and rum. Dust with cocoa powder. Chill before serving."
     },
     {
-        name: "Gulab Jamun",
-        image: "https://example.com/gulab_jamun.jpg",
-        ingredients: ["milk powder", "flour", "butter", "sugar", "cardamom"],
-        instructions: "Mix milk powder, flour, and butter. Knead with water into dough. Form into balls. Fry until golden. Soak in sugar syrup with cardamom."
+        name: "Chocolate Fondue",
+        image: "https://example.com/chocolate_fondue.jpg",
+        ingredients: ["chocolate", "cream", "fruit", "marshmallows", "cookies"],
+        instructions: "Melt chocolate with cream. Serve with fruit, marshmallows, and cookies for dipping."
     },
     {
-        name: "Kheer",
-        image: "https://example.com/kheer.jpg",
-        ingredients: ["rice", "milk", "sugar", "cardamom", "nuts"],
-        instructions: "Boil rice with milk until thickened. Add sugar, cardamom, and nuts. Serve chilled or warm."
+        name: "Apple Pie",
+        image: "https://example.com/apple_pie.jpg",
+        ingredients: ["apples", "pie crust", "sugar", "cinnamon", "lemon juice"],
+        instructions: "Peel and slice apples. Mix with sugar, cinnamon, and lemon juice. Fill pie crust. Bake until golden."
     },
     {
-        name: "Rasmalai",
-        image: "https://example.com/rasmalai.jpg",
-        ingredients: ["milk", "sugar", "cardamom", "saffron", "nuts"],
-        instructions: "Boil milk. Add lemon juice to curdle. Strain and knead to make chenna. Form into discs. Boil in sugar milk with cardamom and saffron until soft. Garnish with nuts."
+        name: "Banana Bread",
+        image: "https://example.com/banana_bread.jpg",
+        ingredients: ["bananas", "flour", "sugar", "butter", "baking soda"],
+        instructions: "Mash bananas. Mix with flour, sugar, butter, and baking soda. Bake until golden brown."
     },
     {
-        name: "Barfi",
-        image: "https://example.com/barfi.jpg",
-        ingredients: ["milk powder", "sugar", "ghee", "cardamom", "nuts"],
-        instructions: "Mix milk powder, sugar, and ghee. Cook until thickened. Spread into a tray. Garnish with cardamom and nuts. Cut into squares."
+        name: "Blueberry Pancakes",
+        image: "https://example.com/blueberry_pancakes.jpg",
+        ingredients: ["pancake mix", "blueberries", "maple syrup", "butter", "eggs"],
+        instructions: "Mix pancake mix with blueberries and eggs. Cook on griddle. Serve with maple syrup and butter."
     },
     {
-        name: "Kalakand",
-        image: "https://example.com/kalakand.jpg",
-        ingredients: ["milk", "sugar", "cardamom", "nuts"],
-        instructions: "Boil milk until thickened. Add sugar and cardamom. Cook until thick. Spread in a tray. Garnish with nuts. Cut into squares."
-    },
-    {
-        name: "Mysore Pak",
-        image: "https://example.com/mysore_pak.jpg",
-        ingredients: ["gram flour", "sugar", "ghee"],
-        instructions: "Roast gram flour in ghee until aromatic. Add sugar syrup. Cook until thickened. Spread in a tray. Cut into pieces once cooled."
-    },
-    {
-        name: "Hakka Noodles",
-        image: "https://example.com/hakka_noodles.jpg",
-        ingredients: ["noodles", "mixed vegetables", "soy sauce", "garlic", "ginger"],
-        instructions: "Boil noodles. Sauté mixed vegetables with soy sauce, garlic, and ginger. Toss with noodles until combined."
-    },
-    {
-        name: "Veg Fried Rice",
-        image: "https://example.com/veg_fried_rice.jpg",
-        ingredients: ["rice", "mixed vegetables", "soy sauce", "garlic", "spring onions"],
-        instructions: "Cook rice. Sauté mixed vegetables with soy sauce, garlic, and spring onions. Mix with cooked rice."
-    },
-    {
-        name: "Gobi Manchurian",
-        image: "https://example.com/gobi_manchurian.jpg",
-        ingredients: ["cauliflower", "corn flour", "soy sauce", "ginger", "garlic"],
-        instructions: "Coat cauliflower with corn flour. Deep fry until crispy. Sauté with soy sauce, ginger, and garlic until coated."
-    },
-    {
-        name: "Chicken Manchurian",
-        image: "https://example.com/chicken_manchurian.jpg",
-        ingredients: ["chicken", "corn flour", "soy sauce", "ginger", "garlic"],
-        instructions: "Coat chicken with corn flour. Deep fry until crispy. Sauté with soy sauce, ginger, and garlic until coated."
-    },
-    {
-        name: "Spaghetti Carbonara",
-        image: "https://example.com/spaghetti_carbonara.jpg",
-        ingredients: ["spaghetti", "bacon", "egg", "parmesan cheese", "black pepper"],
-        instructions: "Boil spaghetti. Sauté bacon until crispy. Mix egg, parmesan cheese, and black pepper. Toss with spaghetti."
-    },
-    {
-        name: "Beef Bourguignon",
-        image: "https://example.com/beef_bourguignon.jpg",
-        ingredients: ["beef stew meat", "red wine", "carrots", "onion", "mushrooms"],
-        instructions: "Sear beef. Sauté carrots, onion, and mushrooms. Add red wine and simmer until beef is tender."
-    },
-    {
-        name: "Chicken Parmesan",
-        image: "https://example.com/chicken_parmesan.jpg",
-        ingredients: ["chicken breasts", "breadcrumbs", "marinara sauce", "mozzarella cheese", "parmesan cheese"],
-        instructions: "Dredge chicken breasts in breadcrumbs. Bake with marinara sauce and mozzarella cheese until bubbly. Sprinkle with parmesan cheese."
-    },
-    {
-        name: "Shrimp Linguine",
-        image: "https://example.com/shrimp_linguine.jpg",
-        ingredients: ["shrimp", "linguine", "cream", "garlic", "parsley"],
-        instructions: "Boil linguine. Sauté shrimp with garlic. Add cream and parsley. Toss with linguine."
-    },
-    {
-        name: "Ratatouille",
-        image: "https://example.com/ratatouille.jpg",
-        ingredients: ["eggplant", "zucchini", "bell pepper", "tomato", "herbs"],
-        instructions: "Sauté eggplant, zucchini, bell pepper, and tomato with herbs until tender. Serve hot."
-    },
-    {
-        name: "Quiche Lorraine",
-        image: "https://example.com/quiche_lorraine.jpg",
-        ingredients: ["pie crust", "bacon", "cheese", "egg", "cream"],
-        instructions: "Bake pie crust. Sauté bacon. Mix cheese, egg, and cream. Add bacon. Pour into crust and bake until set."
-    },
-    {
-        name: "Paella",
-        image: "https://example.com/paella.jpg",
-        ingredients: ["rice", "shrimp", "mussels", "chorizo", "bell pepper"],
-        instructions: "Sauté chorizo with bell pepper. Add rice and broth. Arrange shrimp, mussels, and cook until rice is tender."
-    },
-    {
-        name: "Eggplant Parmesan",
-        image: "https://example.com/eggplant_parmesan.jpg",
-        ingredients: ["eggplant", "mozzarella cheese", "tomato sauce", "breadcrumbs", "parmesan cheese"],
-        instructions: "Bread eggplant slices with breadcrumbs. Layer with mozzarella cheese and tomato sauce. Bake until cheese melts."
-    },
-    {
-        name: "Beef Tacos",
-        image: "https://example.com/beef_tacos.jpg",
-        ingredients: ["ground beef", "taco shells", "lettuce", "tomato", "cheddar cheese"],
-        instructions: "Cook ground beef. Fill taco shells with beef, lettuce, tomato, and cheddar cheese."
-    },
-    {
-        name: "Chicken Curry",
-        image: "https://example.com/chicken_curry.jpg",
-        ingredients: ["chicken", "curry paste", "coconut milk", "potato", "bell pepper"],
-        instructions: "Cook chicken with curry paste. Add coconut milk, potato, and bell pepper. Simmer until chicken is tender."
-    },
-    {
-        name: "Seafood Paella",
-        image: "https://example.com/seafood_paella.jpg",
-        ingredients: ["rice", "shrimp", "mussels", "chorizo", "bell pepper"],
-        instructions: "Sauté chorizo with bell pepper. Add rice and broth. Arrange shrimp, mussels, and cook until rice is tender."
-    },
-    {
-        name: "Eggplant Parmesan",
-        image: "https://example.com/eggplant_parmesan.jpg",
-        ingredients: ["eggplant", "mozzarella cheese", "tomato sauce", "breadcrumbs", "parmesan cheese"],
-        instructions: "Bread eggplant slices with breadcrumbs. Layer with mozzarella cheese and tomato sauce. Bake until cheese melts."
-    },
-    {
-        name: "Beef Tacos",
-        image: "https://example.com/beef_tacos.jpg",
-        ingredients: ["ground beef", "taco shells", "lettuce", "tomato", "cheddar cheese"],
-        instructions: "Cook ground beef. Fill taco shells with beef, lettuce, tomato, and cheddar cheese."
-    },
-    {
-        name: "Chicken Curry",
-        image: "https://example.com/chicken_curry.jpg",
-        ingredients: ["chicken", "curry paste", "coconut milk", "potato", "bell pepper"],
-        instructions: "Cook chicken with curry paste. Add coconut milk, potato, and bell pepper. Simmer until chicken is tender."
-    },
-    {
-        name: "Seafood Paella",
-        image: "https://example.com/seafood_paella.jpg",
-        ingredients: ["rice", "shrimp", "mussels", "chorizo", "bell pepper"],
-        instructions: "Sauté chorizo with bell pepper. Add rice and broth. Arrange shrimp, mussels, and cook until rice is tender."
-    },
-    {
-        name: "Eggplant Parmesan",
-        image: "https://example.com/eggplant_parmesan.jpg",
-        ingredients: ["eggplant", "mozzarella cheese", "tomato sauce", "breadcrumbs", "parmesan cheese"],
-        instructions: "Bread eggplant slices with breadcrumbs. Layer with mozzarella cheese and tomato sauce. Bake until cheese melts."
-    },
-    {
-        name: "Beef Tacos",
-        image: "https://example.com/beef_tacos.jpg",
-        ingredients: ["ground beef", "taco shells", "lettuce", "tomato", "cheddar cheese"],
-        instructions: "Cook ground beef. Fill taco shells with beef, lettuce, tomato, and cheddar cheese."
-    },
-    {
-        name: "Chicken Curry",
-        image: "https://example.com/chicken_curry.jpg",
-        ingredients: ["chicken", "curry paste", "coconut milk", "potato", "bell pepper"],
-        instructions: "Cook chicken with curry paste. Add coconut milk, potato, and bell pepper. Simmer until chicken is tender."
-    },
-    {
-        name: "Seafood Paella",
-        image: "https://example.com/seafood_paella.jpg",
-        ingredients: ["rice", "shrimp", "mussels", "chorizo", "bell pepper"],
-        instructions: "Sauté chorizo with bell pepper. Add rice and broth. Arrange shrimp, mussels, and cook until rice is tender."
-    },
-    {
-        name: "Eggplant Parmesan",
-        image: "https://example.com/eggplant_parmesan.jpg",
-        ingredients: ["eggplant", "mozzarella cheese", "tomato sauce", "breadcrumbs", "parmesan cheese"],
-        instructions: "Bread eggplant slices with breadcrumbs. Layer with mozzarella cheese and tomato sauce. Bake until cheese melts."
-    },
-    {
-        name: "Beef Tacos",
-        image: "https://example.com/beef_tacos.jpg",
-        ingredients: ["ground beef", "taco shells", "lettuce", "tomato", "cheddar cheese"],
-        instructions: "Cook ground beef. Fill taco shells with beef, lettuce, tomato, and cheddar cheese."
-    },
-    {
-        name: "Chicken Curry",
-        image: "https://example.com/chicken_curry.jpg",
-        ingredients: ["chicken", "curry paste", "coconut milk", "potato", "bell pepper"],
-        instructions: "Cook chicken with curry paste. Add coconut milk, potato, and bell pepper. Simmer until chicken is tender."
-    },
-    {
-        name: "Seafood Paella",
-        image: "https://example.com/seafood_paella.jpg",
-        ingredients: ["rice", "shrimp", "mussels", "chorizo", "bell pepper"],
-        instructions: "Sauté chorizo with bell pepper. Add rice and broth. Arrange shrimp, mussels, and cook until rice is tender."
+        name: "Eggs Benedict",
+        image: "https://example.com/eggs_benedict.jpg",
+        ingredients: ["eggs", "English muffins", "ham", "hollandaise sauce", "butter"],
+        instructions: "Poach eggs. Toast English muffins. Top with ham, eggs, and hollandaise sauce. Serve hot."
     }
-    // Add more recipes as needed
 ];
-    
 
-// Function to display recipes based on ingredient
-function displayRecipes(ingredient) {
-    const recipesContainer = document.getElementById('recipes-container');
-    recipesContainer.innerHTML = '';
-
-    const filteredRecipes = recipes.filter(recipe => 
-        recipe.ingredients.some(ing => ing.toLowerCase().includes(ingredient))
-    );
-
-    if (filteredRecipes.length === 0) {
-        recipesContainer.innerHTML = '<p>No recipes found.</p>';
-        return;
-    }
-
-    filteredRecipes.forEach(recipe => {
-        const recipeElement = document.createElement('div');
-        recipeElement.classList.add('recipe');
-
-        recipeElement.innerHTML = `
-            <h2>${recipe.name}</h2>
-            <img src="${recipe.image}" alt="${recipe.name}" class="recipe-image">
-            <p><strong>Ingredients:</strong></p>
-            <ul>
-                ${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
-            </ul>
-            <button onclick="viewRecipe('${recipe.name}')">View Recipe</button>
-        `;
-
-        recipesContainer.appendChild(recipeElement);
-    });
-}
-
-// Function to redirect to recipe detail page
-function viewRecipe(recipeName) {
-    // Encode recipe name to be used in URL
-    const encodedRecipeName = encodeURIComponent(recipeName);
-    
-    // Redirect to recipe detail page passing recipe name as query parameter
-    window.location.href = `recipe.html?recipe=${encodedRecipeName}`;
-}
-
-// Function to load recipe details based on query parameter
-function loadRecipeDetails(recipeName) {
-    const recipe = recipes.find(r => r.name === recipeName);
-
-    if (recipe) {
-        const recipeDetailsContainer = document.getElementById('recipe-details');
-        recipeDetailsContainer.innerHTML = `
-            <h2>${recipe.name}</h2>
-            <img src="${recipe.image}" alt="${recipe.name}" class="recipe-image">
-            <p><strong>Ingredients:</strong></p>
-            <ul>
-                ${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
-            </ul>
-            <p><strong>Instructions:</strong></p>
-            <p>${recipe.instructions}</p>
-        `;
-    } else {
-        const recipeDetailsContainer = document.getElementById('recipe-details');
-        recipeDetailsContainer.innerHTML = '<p>Recipe not found.</p>';
-    }
-}
+// Example usage:
+console.log(recipes[0]); // Print details of the first recipe
